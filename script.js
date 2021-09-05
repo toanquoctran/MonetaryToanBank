@@ -41,7 +41,7 @@ const account2 = {
 
 const account3 = {
     owner: "Hoang Hong Ngo",
-    movements: [200, -200, 340, -300, -20, 50, 400, -460],
+    movements: [20000, -200, 340, -300, -20, 50, 400, -460],
     interestRate: 0.7,
     pin: 6001,
     movementsDates: [
@@ -249,7 +249,8 @@ btnLogin.addEventListener("click", function(e) {
     if (currentAccount && currentAccount.pin === Number(inputLoginPin.value)) {
         // display UI and welcome message
         labelWelcome.textContent = `Welcome back, ${
-      currentAccount.owner.split(" ")[0]
+      currentAccount.owner
+      //   .split(" ")[0]
     }`;
         containerApp.style.opacity = 100;
 
